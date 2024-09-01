@@ -13,6 +13,30 @@ Sample video
 
 https://github.com/user-attachments/assets/57aba4e7-05b7-4e8a-96d1-ce2597434b0c
 
+Library integration
+
+Copy code
+
+dependencyResolutionManagement {
+		
+  repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+		
+  repositories {
+			
+   mavenCentral()
+			
+   maven { url 'https://jitpack.io' }
+		
+  }
+	
+ }
+
+ dependencies {
+	        
+         implementation ("com.github.muhammad-ahmed-lib:translator:v1.1")
+	
+ }
+
 Setup
 
 Add Internet Permission

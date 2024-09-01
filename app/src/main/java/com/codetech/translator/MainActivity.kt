@@ -68,7 +68,6 @@ class MainActivity : AppCompatActivity() {
                     binding.crossBtn.visibility=View.VISIBLE
                     binding.crossBtn.setOnClickListener {
                         binding.translateEd.setText("")
-                        binding.tv.text = ""
                     }
                 }else{
                     binding.crossBtn.visibility=View.GONE
@@ -82,7 +81,6 @@ class MainActivity : AppCompatActivity() {
             translateInterfaceCallBacks()
         }
         binding.wordInfoBtn.setOnClickListener {
-            fetchWordInfo()
         }
     }
     private fun fetchWordInfo(){

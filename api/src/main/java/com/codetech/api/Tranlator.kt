@@ -10,7 +10,10 @@ import androidx.work.WorkManager
 import com.codetech.api.dictionary.DictionaryListener
 import com.codetech.api.dictionary.WordInfo
 import com.codetech.api.error.CustomExceptions.Companion.INVALID_TRANSLATION
+<<<<<<< HEAD
 import com.codetech.api.error.CustomExceptions.Companion.INVALID_WORD
+=======
+>>>>>>> 945354ba6d6aedb695c449f4cf3093178f1af558
 import com.codetech.api.translation.TranslationListener
 import com.google.gson.Gson
 import kotlinx.coroutines.CoroutineScope
@@ -239,6 +242,7 @@ class Translator {
                             onSuccess(wordResponse[0])
                         }
                     } else {
+<<<<<<< HEAD
                        withContext(Dispatchers.Main){
                            onProgress(false)
                            onFailed(response.message)
@@ -254,6 +258,19 @@ class Translator {
             }
         } else {
             onFailed(INVALID_WORD)
+=======
+                        onProgress(false)
+                        onFailed(response.message)
+                    }
+                } catch (e: IOException) {
+                    onProgress(false)
+                    e.printStackTrace()
+                    onFailed(e.message)
+                }
+            }
+        } else {
+            onFailed(INVALID_TRANSLATION)
+>>>>>>> 945354ba6d6aedb695c449f4cf3093178f1af558
         }
 
     }
